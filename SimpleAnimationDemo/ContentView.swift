@@ -1,9 +1,10 @@
 //
 //  ContentView.swift
-//  Tips_09_12_SimpleUIAnimation
+//  SimpAnimationDemo
 //
 //
 //  A Demo for iOS Development Tips Weekly
+//  Season 9 (Q1 2020) video 12. 
 //  by Steven Lipton (C)2020, All rights reserved
 // Check out the video series on LinkedIn learning at https://linkedin-learning.pxf.io/YxZgj
 //  For code go to http://bit.ly/AppPieGithub
