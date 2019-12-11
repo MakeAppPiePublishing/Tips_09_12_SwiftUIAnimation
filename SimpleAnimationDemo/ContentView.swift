@@ -16,19 +16,11 @@ struct ContentView: View {
     @State var fade:Bool = false
     @State var slide = 0
     @State var corners = 0
-    
-    func didTapCorners(){
-       
-            corners = (corners + 30) % 100
-        
-    }
-    
+  
     func resetImage(){
-      
             fade = false
             slide = 0
-            corners = 0
-        
+            corners = 0   
     }
     
     var body: some View {
@@ -55,35 +47,18 @@ struct ContentView: View {
                 .padding(.bottom, 20)
             
             ///Code for the three gestures
-            HStack{
-                
-                //Button 1: fade gesture with a closure
-                Button(action:{
-                    
+            HStack{ 
+                Button("Fade"){
                         self.fade.toggle()
-                    
-                    
-                }){
-                    VStack{
-                        Text("Fade")
-                    }
-                    
                 }
                 Spacer()
-                //Button 2: BUtton calling an action
                 Button("Corners") {
-                    self.didTapCorners()
+                    self.corners = (self.corners + 30) % 100
                 }
                 Spacer()
-                //A view calling a tap gesture
-                Text("Slide")
-                .onTapGesture {
-                    
+                Button("Slide") {
                         self.slide = (self.slide + 50) % 200
-                        
-                    
                 }
-                
             }
             .font(.title)
             .padding()
